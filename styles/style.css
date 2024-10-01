@@ -1,25 +1,76 @@
-.flex {
-    display: flex;
-}
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.item-center{
-    align-items: center;
-}
-
-.justify-around{
-    justify-content: center;
-}
-
-.justify-between{
-    justify-content: space-between;
-}
 body{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+    background-image: url("../img/back.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*
+====================
+    Header and Nav
+====================
+*/
+
+.nav__section{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+.nav__left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+}
+.nav__logo{
+    width: 10rem;
+}
+.nav__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+.nav__link{
+    color: #fff;
+    text-shadow: 1px 1px 1rem rgba(0, 0, 0,0.7);
+}
+.nav__link:hover{
+    color: #225a7a;
+    transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -ms-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+}
+
+.nav__right{
+    height: 5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10rem;
+}
+.nav__country{
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow: 1px 1px 0.6rem rgba(0, 0, 0,0.9);
+}
+.nav__profile{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #fff;
 }
