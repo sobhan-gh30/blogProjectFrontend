@@ -16,19 +16,19 @@ body{
 
 .nav__section{
     display: grid;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: 45% 50%;
 }
 .nav__left{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
     height: 5rem;
 }
 .nav__logo{
-    width: 10rem;
+    width: 8rem;
 }
 .nav__links{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -37,6 +37,7 @@ body{
 .nav__link{
     color: #fff;
     text-shadow: 1px 1px 1rem rgba(0, 0, 0,0.7);
+    font-size: 1rem;
 }
 .nav__link:hover{
     color: #225a7a;
@@ -52,7 +53,7 @@ body{
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 10rem;
+    gap: 2rem;
 }
 .nav__country{
     font-size: 1.3rem;
@@ -60,8 +61,8 @@ body{
     text-shadow: 1px 1px 0.6rem rgba(0, 0, 0,0.9);
 }
 .nav__profile{
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -71,6 +72,30 @@ body{
     display: flex;
     justify-content:center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #fff;
+}
+
+.mobile__nav{
+    width: 2rem;
+    height: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mobile__nav__line , .mobile__nav::before , .mobile__nav::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 1rem;
+    transition: 200ms;
+}
+.mobile__nav-active::before{
+    transform: rotate(45deg)translateY(15px);
+}
+.mobile__nav-active::after{
+    transform: rotate(-45deg)translateY(-15px);
 }
